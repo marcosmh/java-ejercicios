@@ -31,6 +31,17 @@ public class Principal {
         inter.mostrarInformacion();
         inter.calcularBono();
 
+        System.out.println("\n========================================");
+        System.out.println("=== EMPLEADOS ===");
+        System.out.println("========================================");
+
+        Empleado[] empleados = { emp, ger, dev, inter };
+        for(int i = 0; i < empleados.length; i++) {
+            System.out.println("\n--- Empleado " + (i + 1) + " ---");
+            empleados[i].mostrarInformacion();
+            empleados[i].calcularBono();
+        }
+
 
     }
 }
