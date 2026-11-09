@@ -16,11 +16,14 @@ public class Laptop extends Producto {
 
     @Override
     public void mostrarInformacion() {
+
         System.out.println("--- LAPTOP ---");
         super.mostrarInformacion();
+        System.out.println("\n**************************************************");
         System.out.println("Procesador: " + procesador);
         System.out.println("Memoria RAM: " + memoriaRAM + " GB");
         System.out.println("Sistema Operativo: " + sistemaOperativo);
+        System.out.println("\n**************************************************");
     }
 
 }

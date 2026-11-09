@@ -23,8 +23,10 @@ public class Smartphone extends Producto {
             compatible = "Sí";
         }
         super.mostrarInformacion();
+        System.out.println("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         System.out.println("Tamaño de Pantalla: " + this.tamanioPantalla + "\"");
         System.out.println("Sistema Operativo: " + this.sistemaOperativo);
         System.out.println("Compatible con 5G: " + compatible);
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
     }
 }

@@ -24,10 +24,12 @@ public class Producto {
     }
 
     public void mostrarInformacion() {
+        System.out.println("\n#################################################");
         System.out.println("Código Interno: " + this.getCodigoInterno());
         System.out.println("Nombre: " + this.nombre);
         System.out.println("Precio Base: $" + this.precio + " Pesos MXN");
         System.out.println("Stock: " + this.stock + " unidades");
+        System.out.println("#################################################\n");
     }
 
 
