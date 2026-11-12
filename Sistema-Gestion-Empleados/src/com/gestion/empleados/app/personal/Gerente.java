@@ -19,6 +19,6 @@ public class Gerente extends Empleado implements Bonificable {
 
     @Override
     public double calcularSalarioTotal() {
-        return salarioBase * calcularBonificacion();
+        return salarioBase + calcularBonificacion();
     }
 }

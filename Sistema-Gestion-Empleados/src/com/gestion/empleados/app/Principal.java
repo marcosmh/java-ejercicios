@@ -17,8 +17,8 @@ public class Principal {
 
         for(Empleado empleado : empleados) {
             empleado.mostrarInformacion();
-
             System.out.println("Salario Total $ " + empleado.calcularSalarioTotal());
+
 
             if(empleado instanceof Bonificable) {
                 Bonificable bonificable = (Bonificable) empleado;
@@ -26,6 +26,7 @@ public class Principal {
             } else {
                 System.out.println("Este empleado no recibe bonificacion ");
             }
+            System.out.println("--------------------------------\n");
 
         }
     }
