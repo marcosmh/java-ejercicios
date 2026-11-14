@@ -12,10 +12,18 @@ public class Principal {
 
     public static void main(String[] args) {
 
+        // Scanner para lectura de datos por consola.
         Scanner scanner = new Scanner(System.in);
 
+        /*
+         * Se crea un arreglo de tipo Transporte.
+         *
+         * Gracias al polimorfismo podemos almacenar objetos de diferentes
+         * clases hijas (TransporteTerrestre, TransporteMaritimo y TransporteAereo) dentro del mismo arreglo.
+         */
         Transporte[] envios = new Transporte[6];
 
+        // Carga inicial de envíos predefinidos.
         envios[0] = new TransporteTerrestre("T-001","Queretaro","Tabasco",150.0,50.0);
         envios[1] = new TransporteMaritimo("M-001","Colima","Veracruz",1200,300.0);
         envios[2] = new TransporteAereo("A-001","Chihuahua","Yucatan",2000,200.0);
@@ -31,12 +39,25 @@ public class Principal {
         }
 
         int opcion = 0;
+
+        /*
+         * Ciclo principal del sistema.
+         * El menú se ejecuta repetidamente hasta que el usuario
+         * seleccione la opción 3 (Salir).
+         */
         do {
             opcion = menuSistema(scanner, envios);
         } while( opcion != 3);
         scanner.close();
     }
 
+    /**
+     * Muestra el menú principal y ejecuta la opción seleccionada.
+     *
+     * @param scanner Scanner para capturar datos
+     * @param envios Lista de envíos existentes
+     * @return opción seleccionada por el usuario
+     */
     private static int menuSistema(Scanner scanner, Transporte[] envios) {
         int opcion;
         System.out.println("\n=== SISTEMA DE LOGÍSTICA SMARTTRANSPORT ===");
@@ -71,6 +92,11 @@ public class Principal {
         return opcion;
     }
 
+    /**
+     * Permite registrar un nuevo envío mediante la consola.
+     *
+     * @param scanner Scanner utilizado para capturar información.
+     */
     private static void nuevoEnvio(Scanner scanner) {
         System.out.println("\n--- REGISTRO DE NUEVO ENVÍO ---");
         System.out.print("Ingrese ID de envío: ");
@@ -123,6 +149,20 @@ public class Principal {
         return;
     }
 
+    /**
+     * Solicita al usuario el tipo de transporte y crea la instancia
+     * correspondiente según la opción seleccionada.
+     *
+     * @param scanner objeto Scanner utilizado para capturar la entrada del usuario desde consola.
+     * @param id identificador único del envío que será asignado al transporte creado.
+     * @param origen ciudad, estado o ubicación desde donde se realiza el envío.
+     * @param destino ciudad, estado o ubicación hacia donde se dirige el envío.
+     * @param peso peso total de la carga expresado en kilogramos.
+     * @param costoBase costo inicial del envío antes de aplicar recargos,
+     *
+     * @return una instancia de TransporteTerrestre, TransporteMaritimo o TransporteAereo.
+     *
+     */
     private static Transporte tipoTransporte(Scanner scanner, String id, String origen, String destino, double peso, double costoBase) {
         System.out.println("Seleccione tipo de transporte:");
         System.out.println("1. Terrestre");

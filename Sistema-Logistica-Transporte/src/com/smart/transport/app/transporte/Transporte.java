@@ -13,7 +13,7 @@ public abstract class Transporte {
         this.origen = origen;
         this.destino = destino;
         this.pesoCarga = pesoCarga;
-
+        setPesoCarga(pesoCarga);
         this.costoBase = costoBase;
     }
 
