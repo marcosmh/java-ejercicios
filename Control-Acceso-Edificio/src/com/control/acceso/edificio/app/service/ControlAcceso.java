@@ -31,12 +31,12 @@ public class ControlAcceso {
         inicializarHistorial();
     }
 
-    public void registrarUsuario(Usuario usuario) {
+    public void registrarUsuario(Usuario usuario) throws DatosInvalidosException {
         if (usuario == null) {
-            throw new IllegalArgumentException("El usuario no puede ser nulo.");
+            throw new DatosInvalidosException("El usuario no puede ser nulo.");
         }
         if (usuarios.containsKey(usuario.getId())) {
-            throw new IllegalArgumentException(
+            throw new DatosInvalidosException(
                     "Ya existe un usuario registrado con el ID " + usuario.getId() + ".");
         }
 

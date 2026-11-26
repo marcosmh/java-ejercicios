@@ -43,7 +43,7 @@ public class Principal {
                     }
                     default -> System.out.println("Opción no válida. Seleccione del 1 al 6.");
                 }
-            } catch (IllegalArgumentException | DateTimeParseException e) {
+            } catch (DatosInvalidosException | DateTimeParseException e) {
                 System.out.println("Error de datos: " + e.getMessage());
             } catch (Exception e) {
                 // Última barrera para que un error inesperado no cierre el menú.
@@ -54,7 +54,6 @@ public class Principal {
 
     private static void mostrarMenu() {
         System.out.println("""
-
                 =========================================
                    CONTROL DE ACCESO - EDIFICIO
                 =========================================
@@ -65,10 +64,10 @@ public class Principal {
                 5. Desbloquear usuario
                 6. Salir
                 =========================================
-                Seleccione una opción:""");
+                Seleccione una opción: """);
     }
 
-    private static void registrarUsuario(Scanner scanner, ControlAcceso control) {
+    private static void registrarUsuario(Scanner scanner, ControlAcceso control) throws DatosInvalidosException {
         System.out.print("ID: ");
         String id = scanner.nextLine().trim();
 
