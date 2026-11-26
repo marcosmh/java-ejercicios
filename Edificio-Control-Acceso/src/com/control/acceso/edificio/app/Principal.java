@@ -32,16 +32,28 @@ public class Principal {
 
             try {
                 switch (opcion) {
-                    case "1" -> registrarUsuario(scanner, control);
-                    case "2" -> validarAcceso(scanner, control);
-                    case "3" -> control.listarUsuarios();
-                    case "4" -> control.mostrarHistorial();
-                    case "5" -> desbloquearUsuario(scanner, control);
-                    case "6" -> {
+                    case "1": 
+                        registrarUsuario(scanner, control);
+                        break;
+                    case "2": 
+                        validarAcceso(scanner, control);
+                        break;
+                    case "3": 
+                        control.listarUsuarios();
+                        break;
+                    case "4": 
+                        control.mostrarHistorial();
+                        break;
+                    case "5":  
+                        desbloquearUsuario(scanner, control);
+                        break;
+                    case "6":
                         System.out.println("Cerrando el sistema. ¡Hasta pronto!");
                         continuar = false;
-                    }
-                    default -> System.out.println("Opción no válida. Seleccione del 1 al 6.");
+                        break;
+                    default: 
+                        System.out.println("Opción no válida. Seleccione del 1 al 6.");
+                        break;
                 }
             } catch (DatosInvalidosException | DateTimeParseException e) {
                 System.out.println("Error de datos: " + e.getMessage());
