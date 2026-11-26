@@ -1,0 +1,8 @@
+fecha_hora,id,nombre,area,resultado,detalle
+"2026-11-25 20:33:17","0101","Anakin Skywalker","RECEPCION","DENEGADO","Área no autorizada"
+"2026-11-25 20:33:26","0202","YODA VERDE","PISO1","DENEGADO","Área no autorizada"
+"2026-11-25 20:33:40","0101","Anakin Skywalker","PISO1","AUTORIZADO","Acceso permitido al área PISO1"
+"2026-11-25 20:47:58","0101","ANAKIN SKYWALKER","PISO1","AUTORIZADO","Acceso permitido al área PISO1"
+"2026-11-25 20:48:10","0101","ANAKIN SKYWALKER","RECEPCION","AUTORIZADO","Acceso permitido al área RECEPCION"
+"2026-11-25 20:48:18","0202","YODA VERDE","PISO1","DENEGADO","Fuera del horario autorizado"
+"2026-11-25 20:48:32","0202","YODA VERDE","RECEPCION","DENEGADO","Área no autorizada"
