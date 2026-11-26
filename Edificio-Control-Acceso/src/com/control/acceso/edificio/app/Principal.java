@@ -65,18 +65,18 @@ public class Principal {
     }
 
     private static void mostrarMenu() {
-        System.out.println("""
-                =========================================
-                   CONTROL DE ACCESO - EDIFICIO
-                =========================================
-                1. Registrar usuario
-                2. Validar acceso
-                3. Consultar usuarios
-                4. Consultar historial de accesos
-                5. Desbloquear usuario
-                6. Salir
-                =========================================
-                Seleccione una opción: """);
+        System.out.println("=========================================");
+        System.out.println("      CONTROL DE ACCESO - EDIFICIO ");
+        System.out.println("=========================================");
+        System.out.println("1. Registrar usuario");
+        System.out.println("2. Validar acceso");
+        System.out.println("3. Consultar usuarios");
+        System.out.println("4. Consultar historial de accesos");
+        System.out.println("5. Desbloquear usuario");
+        System.out.println("6. Salir");
+        System.out.println("=========================================");
+        System.out.print("Seleccione una opción: ");
+
     }
 
     private static void registrarUsuario(Scanner scanner, ControlAcceso control) throws DatosInvalidosException {
@@ -92,7 +92,8 @@ public class Principal {
         System.out.print("Hora final (HH:mm): ");
         LocalTime fin = LocalTime.parse(scanner.nextLine().trim());
 
-        System.out.print("Áreas permitidas separadas por coma (ej. RECEPCION,PISO1): ");
+        System.out.print("Áreas permitidas separadas por coma ");
+        System.out.print("(ej. RECEPCION,PISO1,PISO2,PISO3,PISO4,PISO5,ALBERCA,AREA_COMUN): ");
         Set<String> areas = Arrays.stream(scanner.nextLine().split(","))
                 .map(String::trim)
                 .filter(s -> !s.isBlank())
